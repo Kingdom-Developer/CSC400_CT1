@@ -1,6 +1,9 @@
 package com.CT1;
 
+// Node class to be used in Bag class
 public class Node<T> {
+
+    // Declare private attributes
     private T item;
     private Node<T> nextItem;
 
@@ -10,20 +13,17 @@ public class Node<T> {
         this.nextItem = null;
     }
 
-    // Getter and setter methods for item
+    // Getter method for item
     public T getItem() {
         return this.item;
     }
 
-    public void setItem(T item) {
-        this.item = item;
-    }
-
-    // Getter and setter methods of nextItem
+    // Getter method for nextItem
     public Node<T> getNextItem() {
         return nextItem;
     }
 
+    // Setter method for nextItem
     public void setNextItem(Node<T> nextItem) {
         this.nextItem = nextItem;
     }
