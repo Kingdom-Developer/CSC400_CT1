@@ -102,6 +102,30 @@ public class Bag<T> implements Iterable<T> {
         return false;
     }
 
+    public int count(T item) {
+        // Declare and initialize occurrences variable
+        int occurrences = 0;
+
+        // Create temporary node and set it equal to the head
+        Node<T> currentItem = head;
+
+        // Traverse through list to check if it contains item
+        while (currentItem != null) {
+
+            // Check if currentItem equals the item being searched for
+            if (currentItem.getItem().equals(item)) {
+                // Increment occurrences
+                occurrences += 1;
+            }
+
+            // If no match, continue through the linked list
+            currentItem = currentItem.getNextItem();
+        }
+
+        // Return total occurrences of item
+        return occurrences;
+    }
+
 
     // Override iterator method
     @Override
