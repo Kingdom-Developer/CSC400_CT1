@@ -7,7 +7,7 @@ public class Node<T> {
     private T item;
     private Node<T> nextItem;
 
-    // Constructor to initialize empty bag
+    // Parameterized constructor
     public Node(T item) {
         this.item = item;
         this.nextItem = null;

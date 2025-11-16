@@ -16,6 +16,8 @@ public class Main {
 
         // Print the bag contents
         System.out.print("Items: ");
+
+        // Iterate through bag and print each item
         for (Integer item : testBag) {
             System.out.print(item + " ");
         }
@@ -39,6 +41,8 @@ public class Main {
 
         // Print the bag contents again
         System.out.print("Items: ");
+
+        // Iterate through bag and print each item
         for (Integer item : testBag) {
             System.out.print(item + " ");
         }

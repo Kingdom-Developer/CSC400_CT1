@@ -77,11 +77,12 @@ public class Bag<T> implements Iterable<T> {
                 return;
             }
 
-            // If no item was removed, continue through the linked list
+            // No item was removed, continue through the linked list
             currentItem = currentItem.getNextItem();
         }
     }
 
+    // Method to check if bag contains item
     public boolean contains(T item) {
         // Create temporary node and set it equal to the head
         Node<T> currentItem = head;
@@ -94,7 +95,7 @@ public class Bag<T> implements Iterable<T> {
                 return true;
             }
 
-            // If no match, continue through the linked list
+            // No match, continue through the linked list
             currentItem = currentItem.getNextItem();
         }
 
@@ -102,6 +103,7 @@ public class Bag<T> implements Iterable<T> {
         return false;
     }
 
+    // Method to return number of occurrences for given item
     public int count(T item) {
         // Declare and initialize occurrences variable
         int occurrences = 0;
@@ -114,11 +116,12 @@ public class Bag<T> implements Iterable<T> {
 
             // Check if currentItem equals the item being searched for
             if (currentItem.getItem().equals(item)) {
+
                 // Increment occurrences
                 occurrences += 1;
             }
 
-            // If no match, continue through the linked list
+            // No match, continue through the linked list
             currentItem = currentItem.getNextItem();
         }
 
@@ -145,12 +148,14 @@ public class Bag<T> implements Iterable<T> {
             currentItem = head;
         }
 
+        // Override hasNext method
         @Override
         public boolean hasNext() {
             // Check if currentItem is the tail
             return currentItem != null;
         }
 
+        // Override next method
         @Override
         public T next() {
             // Check if there is next item
